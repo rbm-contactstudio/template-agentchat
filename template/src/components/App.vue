@@ -74,8 +74,7 @@
 
 <script>
   import { mapActions, mapGetters } from 'vuex';
-  import { CsEvents, CsAlert, CsHeader, CsChatMenuContact, CsSnapshot } from '@contactstudio/agent-tools';
-  import CsWSConnection from './CsWSConnection.vue';
+  import { CsEvents, CsAlert, CsHeader, CsChatMenuContact, CsSnapshot, CsWSConnection } from '@contactstudio/agent-tools';
 
   export default {
     components: {
