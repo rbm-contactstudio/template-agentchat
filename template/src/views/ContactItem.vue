@@ -18,8 +18,8 @@
           </div>
           <div class="cs-conversation">
             <div v-for="(conv, idx) in dialogs" :key="idx">
-              <ConverseAgent v-if="conv.send === 'agent'" :dialog="conv" />
-              <ConverseVisitor v-if="conv.send === 'visitor'" :dialog="conv" />
+              <CsConverseRight v-if="conv.send === 'agent'" :dialog="conv" />
+              <CsConverseLeft v-if="conv.send === 'visitor'" :dialog="conv" />
               <ConverseMedia v-if="conv.send === 'media'" :dialog="conv" />
             </div>
           </div>
@@ -277,7 +277,7 @@
 
 <script>
   import { mapGetters } from 'vuex';
-  import { CsEvents } from '@contactstudio/agent-tools';
+  import { CsEvents, CsConverseLeft, CsConverseRight } from '@contactstudio/agent-tools';
   import ContactTabulation from '../components/ContactTabulation.vue';
   import ContactData from '../components/ContactData.vue';
   import ConverseAgent from '../components/ConverseAgent.vue';
@@ -288,8 +288,8 @@
     components: {
       ContactTabulation,
       ContactData,
-      ConverseAgent,
-      ConverseVisitor,
+      CsConverseRight,
+      CsConverseLeft,
       ConverseMedia
     },
     data(){
