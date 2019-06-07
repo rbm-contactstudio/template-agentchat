@@ -11,6 +11,7 @@
     </div>
     <CsAlert />
     <CsSnapshot />
+    <CsMessageManager />
     <CsWSConnection protocol="ws" port="80" host="172.20.1.196"
                     url="user_messaging" :query="queryWS" />
   </div>
@@ -74,7 +75,7 @@
 
 <script>
   import { mapActions, mapGetters } from 'vuex';
-  import { CsEvents, CsAlert, CsHeader, CsChatMenuContact, CsSnapshot, CsWSConnection } from '@contactstudio/agent-tools';
+  import { CsEvents, CsAlert, CsHeader, CsChatMenuContact, CsSnapshot, CsWSConnection, CsMessageManager } from '@contactstudio/agent-tools';
 
   export default {
     components: {
@@ -82,7 +83,8 @@
       CsHeader,
       CsChatMenuContact,
       CsSnapshot,
-      CsWSConnection
+      CsWSConnection,
+      CsMessageManager
     },
     data(){
       return {
