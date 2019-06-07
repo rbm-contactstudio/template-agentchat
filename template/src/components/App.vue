@@ -136,7 +136,7 @@
           this.treatMenuContacts(snap);
         },
         getContactName(cont){
-          return cont.contact_point.split('__at__')[0];
+          return cont.contact_point.split('@visitors')[0].split('__at__')[0];
         },
         treatMenuContacts(snap){
           let menu = [];
