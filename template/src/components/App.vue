@@ -143,6 +143,7 @@
           snap.contacts.forEach(cont => {
             menu.push({
               label: this.getContactName(cont),
+              notread: 0,
               route: {
                 name: 'contactitem',
                 params: {
