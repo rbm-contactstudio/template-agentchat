@@ -329,7 +329,7 @@
     computed: mapGetters('lib', ['getSnapshot']),
     methods: {
       getContactName(cont){
-        return cont.contact_point.split('__at__')[0];
+        return cont.contact_point.split('@visitors')[0].split('__at__')[0];
       },
       loadContact(snap){
         let id = this.$route.params.id;
