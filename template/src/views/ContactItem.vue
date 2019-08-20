@@ -276,21 +276,24 @@
 </style>
 
 <script>
-  import { mapGetters } from 'vuex';
-  import { CsEvents, CsConverseLeft, CsConverseRight } from '@contactstudio/agent-tools';
+  import { mapActions, mapGetters } from 'vuex';
+  import {
+    CsEvents, CsConverseLeft, CsConverseRight, CsWorkerTimer
+  } from '@contactstudio/agent-tools';
   import ContactTabulation from '../components/ContactTabulation.vue';
+  import ContactHistory from '../components/ContactHistory.vue';
   import ContactData from '../components/ContactData.vue';
-  import ConverseAgent from '../components/ConverseAgent.vue';
-  import ConverseVisitor from '../components/ConverseVisitor.vue';
   import ConverseMedia from '../components/ConverseMedia.vue';
 
   export default {
     components: {
       ContactTabulation,
+      ContactHistory,
       ContactData,
       CsConverseRight,
       CsConverseLeft,
-      ConverseMedia
+      ConverseMedia,
+      CsWorkerTimer
     },
     data(){
       return {
